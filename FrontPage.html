@@ -1,0 +1,29 @@
+<html>
+<script >
+
+function printExternal(url) {
+alert("fn entered");
+    var printWindow = window.open( url, 'Print', 'left=200, top=200, width=950, height=500, toolbar=0, resizable=0');
+
+    printWindow.addEventListener('load', function(){
+window.print();
+        printWindow.print();
+        printWindow.close();
+    }, true);
+}
+</script>
+
+<script>
+function myFunction() {
+    alert("2nd methof");
+}
+</script>
+
+<body>
+
+<h1> This is haathi k daat - dikhane waale  </h1>
+<input type="button" name ="print" onclick="printExternal('PrintPage.html')" value ="PRINT PAGE" /> 
+<input type="button" name ="print1" onclick="myFunction()" value ="PRINT " /> 
+<a href="PrintPage.html" > PIRNT this </a>
+</body>
+</html>
